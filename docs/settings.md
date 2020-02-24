@@ -9,11 +9,11 @@ We will be using the following main libraries for coding:
 3. [TQDM](https://github.com/tqdm/tqdm) for progress bar visualization on processing.
 4. [opencv](https://pypi.org/project/opencv-python/) for image processing.
 
-## 2.3 Settings
+## 2.2 Settings
 
 The following are all the main configuration settings to train and run the model.
 
-## 2.3.1 Global Settings
+## 2.2.1 Global Settings
 
 This are the global variables use to setup the configuration for the models.
 
@@ -64,7 +64,7 @@ This are the global variables use to setup the configuration for the models.
 </tbody>
 </table>
 
-## 2.3.2 Data agumentation settings
+## 2.2.2 Data agumentation settings
 
 This are the settings use to setup the data augmentation parameters.
 
@@ -105,7 +105,7 @@ This are the settings use to setup the data augmentation parameters.
 </tbody>
 </table>
 
-## 2.3.3 Training settings
+## 2.2.3 Training settings
 
 This are the settings use to setup the data augmentation parameters.
 
@@ -141,7 +141,7 @@ This are the settings use to setup the data augmentation parameters.
 </tbody>
 </table>
 
-## 2.3.4 Network settings
+## 2.2.4 Network settings
 
 This are the settings to setup the network to train and use.
 

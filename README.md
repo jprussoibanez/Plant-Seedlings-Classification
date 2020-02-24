@@ -8,18 +8,19 @@ The goal is to differentiate a weed from a crop seedling in order to perform sit
 The [database of images](https://arxiv.org/abs/1711.05458) has approximately 960 unique plants belonging to 12 species at several growth stages. It comprises annotated RGB images with a physical resolution of roughly 10 pixels per mm.
 
 ## Kernel structure
-
 The following is a summary of the kernel main structure.
 
-### 1. Kagglers solutions and discussions
+### [1. Kagglers solutions and discussions](docs/kagglers_discussions.md)
 - Review other kagglers kernels to look into possible solutions.
 - Review the competition discussion forum for better understanding of the challenges and general ideas.
 
-Further conclusions can be find [here](docs/kagglers_discussions.md).
+Further discussion and conclusions can be find [here](docs/kagglers_discussions.md).
 
-### 2. Libraries and settings
-- This section has all available settings to configure the training and model configuration. You can find better explanation of each configuration [here](docs/settings.md).
-### 3. Data analysis
+### [2. Libraries and settings](docs/settings.md)
+- This section has all available settings to configure the training and model configuration.
+
+You can find a better explanation for each configuration [here](docs/settings.md).
+### 3. Data analysis◊
 - Main data exploration and analysis to determine the best model to solve the challenge.
 - Use of descriptive analysis to determine dataset distribution.
 - Use of t-SNE to reduce dimensionality for data visualization.
