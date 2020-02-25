@@ -21,8 +21,8 @@ The notebook can be run with [Google Colab](https://colab.research.google.com/).
 
 Two different deep learning models architectures have being used with the following results:
 
-1. [Plant Seedlings Classification with custom CNN](./results/Plant%20Seedlings%20Classification%20with%20custom%20CNN.ipynb): This shows the notebook results for a three layer CNN with batch normalization and regularization and a FNN classifier (88% Kaggle score).
-2. [Plant Seedlings Classification with Xception](./results/Plant%20Seedlings%20Classification%20with%20Xception.ipynb): This shows the notebook results for a pre-trained Xception with transfer learning on a regular FNN classifier (11% Kaggle score).
+1. [Plant Seedlings Classification with custom CNN](./results/Plant%20Seedlings%20Classification%20with%20Custom%20CNN.ipynb): This shows the notebook results for a three layer CNN with batch normalization and regularization and a FNN classifier (88% Kaggle score).
+2. [Plant Seedlings Classification with Xception](./results/Plant%20Seedlings%20Classification%20with%20xception.ipynb): This shows the notebook results for a pre-trained Xception with transfer learning on a regular FNN classifier (11% Kaggle score).
 
 # Notebook summary
 The following is a summary of the notebook main structure.
