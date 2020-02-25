@@ -7,20 +7,37 @@ The goal is to differentiate a weed from a crop seedling in order to perform sit
 ## Dataset
 The [database of images](https://arxiv.org/abs/1711.05458) has approximately 960 unique plants belonging to 12 species at several growth stages. It comprises annotated RGB images with a physical resolution of roughly 10 pixels per mm.
 
-## Kernel structure
-The following is a summary of the kernel main structure.
+# Getting started
+
+The notebook [Plant Seedlings Classification.ipynb](Plant%20Seedlings%20Classification.ipynb) has the kernel for analysing, processing and solving the competition.
+
+## Running the notebook
+
+The notebook can be run with [Google Colab](https://colab.research.google.com/). For a more detailed explanation on the notebook configuration please refer [here](./docs/settings.md).
+
+*NOTE: The user should configure at least the BASE_DATASET_FOLDER for correctly uploading the images datasets.*
+
+## Training results
+
+Two different deep learning models architectures have being used with the following results:
+
+1. [Plant Seedlings Classification with custom CNN](./results/Plant%20Seedlings%20Classification%20with%20Custom%20CNN.ipynb): This shows the notebook results for a three layer CNN with batch normalization and regularization and a FNN classifier (88% Kaggle score).
+2. [Plant Seedlings Classification with Xception](./results/Plant%20Seedlings%20Classification%20with%20xception.ipynb): This shows the notebook results for a pre-trained Xception with transfer learning on a regular FNN classifier (11% Kaggle score).
+
+# Notebook summary
+The following is a summary of the notebook main structure.
 
 ### 1. Kagglers challenges and discussions
 - Review other kagglers kernels to better understand the competition challenges.
 - Review the competition discussion forum for interesting conversation threads.
 - Generate insights from the information gathering.
 
-For further information please refer [here](https://github.com/jprussoibanez/plant-seedlings-classification/blob/master/docs/kagglers_discussions.md).
+For further information please refer [here](./docs/kagglers_discussions.md).
 
 ### 2. Libraries and settings
 - This section has available settings to configure the model and its training parameters.
 
-For further information please refer [here](https://github.com/jprussoibanez/plant-seedlings-classification/blob/master/docs/settings.md).
+For further information please refer [here](./docs/settings.md).
 
 ### 3. Data analysis
 - Data exploration and descriptive analysis to determine dataset shape and distribution.
