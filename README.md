@@ -11,21 +11,24 @@ The [database of images](https://arxiv.org/abs/1711.05458) has approximately 960
 The following is a summary of the kernel main structure.
 
 ### 1. Kagglers challenges and discussions
-- Review other kagglers kernels to better understand the challenges.
-- Review the competition discussion forum for interesting threads.
-- Generate some insights and conclusions from the ideas use in solving the problem.
+- Review other kagglers kernels to better understand the competition challenges.
+- Review the competition discussion forum for interesting conversation threads.
+- Generate insights from the information gathering.
+
+For further information please refer [here](https://github.com/jprussoibanez/plant-seedlings-classification/blob/master/docs/kagglers_discussions.md).
 
 ### 2. Libraries and settings
-- This section has all available settings to configure the model and its training parameters.
+- This section has available settings to configure the model and its training parameters.
+
+For further information please refer [here](https://github.com/jprussoibanez/plant-seedlings-classification/blob/master/docs/settings.md).
 
 ### 3. Data analysis
-- Main data exploration and analysis to determine the best model to solve the problem.
-- Use of descriptive analysis to determine dataset distribution.
+- Data exploration and descriptive analysis to determine dataset shape and distribution.
 - Use of t-SNE to reduce dimensionality for data visualization.
 
 ### 4. Pre-processing
-- Class weights definition to balance the dataset distribution.
-- Image segmentation to remove image soil background.
+- Class weights calculation to balance the dataset distribution.
+- Image segmentation to mask image background.
 - Data augmentation to increase the images dataset.
 
 ### 5. Processing
@@ -42,6 +45,7 @@ The following is a summary of the kernel main structure.
 - Use more classifiers like XGBoost, SVM, etc. instead of just the FNN.
 - Ensemble models to improve performance by combining different models.
 - Use cross-validation to better evaluate the estimator performance.
+- Save and load model weights to facilitate reinitializing training.
 
 # Links
 
