@@ -2,7 +2,7 @@
 
 ## 2.1 Libraries
 
-We will be using the following main libraries for coding:
+This are the main libraries for coding:
 
 1. [tensorflow](https://www.tensorflow.org/) with [keras](https://keras.io/) for managing the deep learning models.
 2. [sckilit-learn](https://scikit-learn.org/), [numpy](https://numpy.org/), [pandas](https://pandas.pydata.org/) with [seaborn](https://seaborn.pydata.org/) and [matplotlib](https://matplotlib.org/) for data manipulation, analysis and visualization.
