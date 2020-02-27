@@ -22,7 +22,7 @@ The notebook can be run with [Google Colab](https://colab.research.google.com/).
 Two different deep learning models architectures have being used with the following results:
 
 1. [Plant Seedlings Classification with custom CNN](./results/Plant%20Seedlings%20Classification%20with%20Custom%20CNN.ipynb): This shows the notebook results for a three layer CNN with batch normalization and regularization and a FNN classifier (88% Kaggle score).
-2. [Plant Seedlings Classification with Xception](./results/Plant%20Seedlings%20Classification%20with%20xception.ipynb): This shows the notebook results for a pre-trained Xception with transfer learning on a regular FNN classifier (11% Kaggle score).
+2. [Plant Seedlings Classification with Xception](./results/Plant%20Seedlings%20Classification%20with%20xception.ipynb): This shows the notebook results for a pre-trained Xception with transfer learning on a regular FNN classifier (11% Kaggle score). The validation and test results are low because the model lack the use of the [xception process_input](https://www.tensorflow.org/api_docs/python/tf/keras/applications/xception/preprocess_input) to normalize the input with the pre-trained data. On the other hand, this shows how easy it is to change the network and try different alternative models within the notebook.
 
 # Notebook summary
 The following is a summary of the notebook main structure.
@@ -57,6 +57,8 @@ For further information please refer [here](./docs/settings.md).
 - Generate prediction file with Kaggle competition format.
 
 # ToDo & Improvements
+- Use of [process_input](https://www.tensorflow.org/api_docs/python/tf/keras/applications/xception/preprocess_input) to normalize the input with the pre-trained model data if used.
+- Rescale images between [0 -1] instead of [0 - 255] to help the model learn faster.
 - Fine tune pre-trained models by unfreezing and training the last layers on the CNN.
 - Use hyperparameters optimization using some library like [hyperopt](https://github.com/hyperopt/hyperopt) to optimize model parameters.
 - Use more classifiers like XGBoost, SVM, etc. instead of just the FNN.
