@@ -19,10 +19,9 @@ The notebook can be run with [Google Colab](https://colab.research.google.com/).
 
 ## Training results
 
-Two different deep learning models architectures have being used with the following results:
+The following is the result of training a custom CNN:
 
 1. [Plant Seedlings Classification with custom CNN](./results/Plant%20Seedlings%20Classification%20with%20Custom%20CNN.ipynb): This shows the notebook results for a three layer CNN with batch normalization and regularization and a FNN classifier (88% Kaggle score).
-2. [Plant Seedlings Classification with Xception](./results/Plant%20Seedlings%20Classification%20with%20xception.ipynb): This shows the notebook results for a pre-trained Xception with transfer learning on a regular FNN classifier (11% Kaggle score). The validation and test results are low because the model lack the use of the [xception process_input](https://www.tensorflow.org/api_docs/python/tf/keras/applications/xception/preprocess_input) to normalize the input with the pre-trained data. On the other hand, this shows how easy it is to change the network and try different alternative models within the notebook.
 
 # Notebook summary
 The following is a summary of the notebook main structure.
