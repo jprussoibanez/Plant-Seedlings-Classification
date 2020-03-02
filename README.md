@@ -13,15 +13,34 @@ The notebook [Plant Seedlings Classification.ipynb](Plant%20Seedlings%20Classifi
 
 ## Running the notebook
 
-The notebook can be run with [Google Colab](https://colab.research.google.com/). For a more detailed explanation on the notebook configuration please refer [here](./docs/settings.md).
+The notebook can be run with [Google Colab](https://colab.research.google.com/). For a more detailed explanation on the notebook configuration please refer [here](./docs/settings.md). Mainly all models were runned on Kaggle environment.
 
 *NOTE: The user should configure at least the BASE_DATASET_FOLDER for correctly uploading the images datasets.*
 
 ## Training results
 
-The following is the result of training a custom CNN:
+The following is the training results order from better to worse on Kaggle competition score:
 
-1. [Plant Seedlings Classification with custom CNN](./results/Plant%20Seedlings%20Classification%20with%20Custom%20CNN.ipynb): This shows the notebook results for a three layer CNN with batch normalization and regularization and a FNN classifier (88% Kaggle score).
+1. [Fine tuned VGG19 with XGBoost classifier](./results/vgg19/vgg19-with-XGBoost-classifier.ipynb): Notebook with fine tuning VGG19 model and stacking a XGBoost classifier with hyperparameter optimization. (96.5%)
+
+![alt text](./results/vgg19/fine-tuning-vgg19-charts.png "VGG19 charts")
+![alt text](./results/vgg19/fine-tuning-vgg19-confusion-matrix.png "VGG19 confusion matrix")
+
+2. [Fine tuned VGG19 with SVC classifier](./results/vgg19/vgg19-with-SVC-classifier.ipynb): Notebook with fine tuning VGG19 model and stacking a SVC classifier with hyperparameter optimization. (95.8%)
+
+3. [Fine tuned Inception-Resnet v2 with XGBoost classifier](./results/inception-resnet-v2/fine-tuning-inception-resnet-v2-with-XGBoost-classifier.ipynb): Notebook with fine tuning Inception Resnet v2 model and stacking a XGBoost classifier with hyperparameter optimization. (95.8%)
+
+4. [Fine tuned Inception-Resnet v2 with SVC classifier](./results/inception-resnet-v2/fine-tuning-inception-resnet-v2-with-SVC-classifier.ipynb): Notebook with fine tuning Inception Resnet v2 model and stacking a SVC classifier with hyperparameter optimization. (95.6%)
+
+5. [Fine tuned Resnet v2 with SVC classifier](./results/resnet-v2/fine-tuning-resnet-v2-with-SVC-classifier.ipynb): Notebook with fine tuning Resnet v2 model and stacking a SVC classifier with hyperparameter optimization. (94.4%)
+
+6. [Fine Tuning Inception Resnet v2](./results/inception-resnet-v2/fine-tuning-inception-resnet-v2.ipynb): Notebook with transfer learning and fine tuning Inception resnet v2 model.(94.2% Kaggle score)
+
+7. [Fine Tuning VGG19](./results/vgg19/fine-tuning-VGG19.ipynb): This shows the notebook results for transfer learning and fine tuning VGG19 model.(93% Kaggle score).
+
+8. [Fine Tuning Resnet v2](./results/resnet-v2/fine-tuning-resnet-v2.ipynb): This shows the notebook results for transfer learning and fine tuning Resnet v2 model.(93% Kaggle score).
+
+9. [Custom CNN](./results/custom-cnn/custom-CNN.ipynb): Notebook with a custom three layer CNN with batch normalization and regularization and a FCN classifier (88% Kaggle score).
 
 # Notebook summary
 The following is a summary of the notebook main structure.
@@ -48,22 +67,41 @@ For further information please refer [here](./docs/settings.md).
 - Data augmentation to increase the images dataset.
 
 ### 5. Processing
-- Use of transfer learning with different pre-trained models like Resnet50 and InceptionV3. Other pre-trained models can be easily added.
-- Use of custom CNN with multiple layers.
-- FNN as the last layer classifier.
+- Use of transfer learning with the following pre-trained models. (Other pre-trained models can be easily added)
+    - CUSTOM_CNN: Custom multi-layer CNN.
+    - RESNET_V2: Pre-trained model [Resnet_v2](https://www.tensorflow.org/api_docs/python/tf/keras/applications/resnet_v2).
+    - INCEPTION_V3: Pre-trained model [InceptionV3](https://www.tensorflow.org/api_docs/python/tf/keras/applications/inception_v3).
+    - XCEPTION: Pre-trained model [Xception](https://www.tensorflow.org/api_docs/python/tf/keras/applications/Xception)
+    - INCEPTION_RESNET_V2: Pre-trained model [InceptionResNetV2](https://www.tensorflow.org/api_docs/python/tf/keras/applications/InceptionResNetV2)
+    - VGG16: Pre-trained model [VGG16](https://www.tensorflow.org/api_docs/python/tf/keras/applications/VGG16)
+    - VGG19: Pre-trained model [VGG19](https://www.tensorflow.org/api_docs/python/tf/keras/applications/VGG19)
+    - MOBILE_NET_V2: Pre-trained model [MobileNetV2](https://www.tensorflow.org/api_docs/python/tf/keras/applications/MobileNetV2)
+    - NASNET_MOBILE: Pre-trained model [NASNetMobile](https://www.tensorflow.org/api_docs/python/tf/keras/applications/NASNetMobile)
+- Use of custom CNN with multiple layers based on recommendations from [here](http://cs231n.github.io/convolutional-networks/).
+- Stacking with the following classifiers:
+    - Fully connected network: Fully connected network with dense layers, normalization, regularization and the use of softmax for classification. 
+    - [XGBoost](https://xgboost.readthedocs.io/en/latest/): XGBoost provides a parallel tree boosting (also known as GBDT, GBM) that solve many data science problems in a fast and accurate way.
+    - [SVM](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html): C-Support Vector Classification from the SVM family.
+    - [LightGBM](https://lightgbm.readthedocs.io/en/latest/): LightGBM is a gradient boosting framework that uses tree based learning algorithms.
+- Use of [Bayesian Hyperparameter Optimization](https://scikit-optimize.github.io/stable/auto_examples/sklearn-gridsearchcv-replacement.html) for XGBoost, SVC and LightGBM.
 
 ### 6. Generate prediction file
 - Generate prediction file with Kaggle competition format.
 
 # ToDo & Improvements
-- Use of [process_input](https://www.tensorflow.org/api_docs/python/tf/keras/applications/xception/preprocess_input) to normalize the input with the pre-trained model data if used.
-- Rescale images between [0 -1] instead of [0 - 255] to help the model learn faster.
-- Fine tune pre-trained models by unfreezing and training the last layers on the CNN.
-- Use hyperparameters optimization using some library like [hyperopt](https://github.com/hyperopt/hyperopt) to optimize model parameters.
-- Use more classifiers like XGBoost, SVM, etc. instead of just the FNN.
+
+This is the list of improvements implemented (cross-out) and still to do.
+- ~~Use of [process_input](https://www.tensorflow.org/api_docs/python/tf/keras/applications/xception/preprocess_input) to normalize the input with the pre-trained model data if used.~~
+- ~~Use more classifiers like XGBoost, SVM, etc. instead of just the FCN.~~
+- ~~Fine tune pre-trained models by unfreezing and training the last layers on the CNN.~~
+- ~~Rescale images between [0 -1] instead of [0 - 255] to help the model learn faster.~~
+- ~~Save and load model weights to facilitate reinitializing training.~~
+- ~~Stacking convolutional model with different classifiers.~~
+- ~~Use hyperparameters optimization using some library like BayesSearchCV, GridSearchCV or RandomizedSearchCV to optimize model parameters.~~
+- Use hyperparameters optimization for FCN classifier using some library like [hyperopt](https://github.com/hyperopt/hyperopt) to optimize model parameters.
 - Ensemble models to improve performance by combining different models.
 - Use cross-validation to better evaluate the estimator performance.
-- Save and load model weights to facilitate reinitializing training.
+
 
 # Links
 
