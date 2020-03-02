@@ -155,16 +155,38 @@ This are the settings to setup the network to train and use.
 </thead>
 <tbody>
 <tr>
-<td>NETWORK_TO_TRAIN</td>
+<td>CONVOLUTIONAL_MODEL</td>
 <td>
-    The are three networks to train and use:</br>
+    This are the networks to train and use as the convolutional model:</br>
 <ul>
-    <li>CUSTOM_CNN: Simple three layer CNN</li>
-    <li>RESNET_50: <a hred="https://keras.io/applications/#resnet">Resnet50 from keras applications</a></li>
-    <li>INCEPTION_V3: <a hred="https://keras.io/applications/#xception">Inception from keras applications</a></li>
+    <li>CUSTOM_CNN: Three layer CNN with regularization and normalization</li>
+    <li><a hred="https://keras.io/applications/#resnet">RESNET_50</a></li>
+    <li><a hred="https://keras.io/applications/#inceptionv3">INCEPTION_V3</a></li>
+    <li><a hred="https://keras.io/applications/#xception">XCEPTION</a></li>
+    <li><a hred="https://keras.io/applications/#inceptionresnetv2">INCEPTION_RESNET_V2</a></li>
+    <li><a hred="https://keras.io/applications/#vgg16">VGG16</a></li>
+    <li><a hred="https://keras.io/applications/#vgg19">VGG19</a></li>
+    <li><a hred="https://keras.io/applications/#mobilenetv2">MOBILE_NET_V2</a></li>
+    <li><a hred="https://keras.io/applications/#nasnet">NASNET_MOBILE</a></li>
+    <li>LOAD_MODEL: This will look for a HDF5 model to load from CONVOLUTIONAL_MODEL_WEIGHTS_PATH and LOAD_MODEL_PREPROCESS_FUNCTION for image input preprocessing</li>
 </ul>
 </td>
-<td>CUSTOM_CNN</td>
+<td>VGG19</td>
+</tr>
+<tr>
+<td>CLASSIFIER_MODEL</td>
+<td>
+    This are the models to train and use as the classifier:</br>
+<ul>
+    <li>FCN: Dense network with softmax classification layer</li>
+    <li>XGBoost: XGBoost with hyperparameter optimization</li>
+    <li>SVC: SVC with hyperparameter optimization</li>
+    <li>LIGHT_GBM: LIGHT_GBM with hyperparameter optimization</li>
+    <li>BEST_MODEL_SVC: SVC with defined hyperparameters</li>
+    <li>BEST_MODEL_XGBoost: XGBoost with defined hyperparameters</li>
+</ul>
+</td>
+<td>XGBoost</td>
 </tr>
 </tbody>
 </table>
