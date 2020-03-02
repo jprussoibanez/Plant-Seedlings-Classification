@@ -40,13 +40,13 @@ The following is the training results, order from better to worse on Kaggle comp
 
 5. [Fine tuned Resnet v2 with SVC classifier](./results/resnet-v2/fine-tuning-resnet-v2-with-SVC-classifier.ipynb): Notebook with fine tuning Resnet v2 model and stacking a SVC classifier with hyperparameter optimization. [94.4% kaggle score](./results/resnet-v2/submission_resnet_v2_with_SVC_classifier.csv)
 
-6. [Fine Tuning Inception Resnet v2](./results/inception-resnet-v2/fine-tuning-inception-resnet-v2.ipynb): Notebook with transfer learning and fine tuning Inception resnet v2 model.(94.2% Kaggle score)
+6. [Fine Tuning Inception Resnet v2](./results/inception-resnet-v2/fine-tuning-inception-resnet-v2.ipynb): Notebook with transfer learning and fine tuning Inception resnet v2 model.[94.2% Kaggle score](./results/inception-resnet-v2/submission_fine_tuning_inception_resnet_v2.csv)
 
-7. [Fine Tuning VGG19](./results/vgg19/fine-tuning-VGG19.ipynb): This shows the notebook results for transfer learning and fine tuning VGG19 model.(93% Kaggle score).
+7. [Fine Tuning VGG19](./results/vgg19/fine-tuning-VGG19.ipynb): This shows the notebook results for transfer learning and fine tuning VGG19 model.[93% Kaggle score](./results/vgg19/submission_fine_tuning_vgg19.csv).
 
-8. [Fine Tuning Resnet v2](./results/resnet-v2/fine-tuning-resnet-v2.ipynb): This shows the notebook results for transfer learning and fine tuning Resnet v2 model.(93% Kaggle score).
+8. [Fine Tuning Resnet v2](./results/resnet-v2/fine-tuning-resnet-v2.ipynb): This shows the notebook results for transfer learning and fine tuning Resnet v2 model.[93% Kaggle score](./results/resnet-v2/submission_fine_tuning_resnet_v2.csv)
 
-9. [Custom CNN](./results/custom-cnn/custom-CNN.ipynb): Notebook with a custom three layer CNN with batch normalization and regularization and a FCN classifier (88% Kaggle score).
+9. [Custom CNN](./results/custom-cnn/custom-CNN.ipynb): Notebook with a custom three layer CNN with batch normalization and regularization and a FCN classifier (88% Kaggle score)
 
 # Notebook summary
 The following is a summary of the notebook main structure.
