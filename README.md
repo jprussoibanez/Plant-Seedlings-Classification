@@ -15,7 +15,7 @@ The notebook may take some hours to run, so in practice it was splitted into two
 1. [Fine tuned VGG16](./results/vgg19/fine-tuning-VGG19.ipynb): Notebook to fine tuned VGG16 and save the model and weights into HDF5 format.
 2. [Stacking with SVC classifier](./results/vgg19/vgg19-with-SVC-classifier.ipynb): Notebook to load the fine tuned VGG16 and train on SVC classifier.
 
-*Note: The best fine tuned models were saved into HDF5 format into a [kaggle dataset](www.kaggle.com/dataset/aeb863923f4530b203024c153509dde3249b414457553efc99286c9c3b2e3279) to be loaded for stacking. Although XGBoost was the best solution, it sometimes may use more than 16GB RAM and fail to run, so this notebook use SVC for better stability.*
+*Note: The best fine tuned models were saved into HDF5 format into a [kaggle dataset](https://www.kaggle.com/dataset/aeb863923f4530b203024c153509dde3249b414457553efc99286c9c3b2e3279) to be loaded for stacking. Although XGBoost was the best solution, it sometimes may use more than 16GB RAM and fail to run, so this notebook use SVC for better stability.*
 
 ## Running the notebook
 
